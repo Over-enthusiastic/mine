@@ -12,7 +12,7 @@ def print_byts(n1,n2):
         out=out+byts[i]
     return out
 first_line=1
-f=open("/home/aks/getmemproc")
+f=open("filename")
 for i in f.readlines():
     if first_line:
         print ("PACA start address is : " + i.split(":")[0])
