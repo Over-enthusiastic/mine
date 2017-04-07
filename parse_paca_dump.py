@@ -9,7 +9,6 @@ byts=[]
 def print_byts(n1,n2):
     out=""
     for i in range(n2,n1-1,-1):
-        print str(i)+" : "+byts[i]
         out=out+byts[i]
     return out
 if (len(sys.argv) != 2) :
@@ -23,12 +22,9 @@ for i in f.readlines():
     i=i.split(":")[1]
     i=i.strip();
     for b in i.split(" "):
-        print b
         for j in range(0,8,2):
             byts.append(b[j:j+2])
 
-print byts[0]
-print byts[1]
 print "lpaca : 0x" + print_byts(0x0,0x7)
 print "paca_index: 0x" + print_byts(0x8,0x9)
 print "paca_lock: 0x" + print_byts(0x10,0x11)
