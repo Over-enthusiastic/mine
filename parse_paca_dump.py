@@ -11,8 +11,10 @@ def print_byts(n1,n2):
     for i in range(n1,n2+1,1):
         out=out+byts[i]
     return out
+if (len(sys.argv) != 2) :
+    print "Usage ./prase_paca_dump.py <dump_file>"
 first_line=1
-f=open("filename")
+f=open(sys.argv[1])
 for i in f.readlines():
     if first_line:
         print ("PACA start address is : " + i.split(":")[0])
